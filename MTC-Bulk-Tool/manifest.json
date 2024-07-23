@@ -1,0 +1,23 @@
+{
+    "manifest_version": 3,
+    "name": "MTC Bulk Tool",
+    "version": "1.0",
+    "description": "Manage top containers in ArchivesSpace with ease.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "icon.png"
+        // "48": "icon.png",
+        // "128": "icon.png"
+      }
+    },
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        // "matches": ["*://*/staff/top_containers"],
+        "js": ["content.js"]
+      }
+    ]
+  }
+  

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ArchivesSpace Search</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      width: 300px;
+    }
+    textarea, input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      margin-bottom: 10px;
+    }
+    textarea {
+      min-height: 100px;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      cursor: pointer;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    label {
+      display: block;
+      padding-left: 15px;
+      text-indent: -15px;
+    }
+    input[type="checkbox"] {
+      width: 13px;
+      height: 13px;
+      padding: 0;
+      margin: 0;
+      vertical-align: bottom;
+      position: relative;
+      top: -1px;
+    }
+    .option {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <label for="searchStrings">Enter search strings, separated by carriage returns:</label>
+  <textarea id="searchStrings"></textarea>
+  
+  <label for="searchColumnIndices">Enter search column indices (comma-separated):</label>
+  <input type="text" id="searchColumnIndices" value="5">
+  
+  <label for="returnColumnIndices">Enter return column indices (comma-separated):</label>
+  <input type="text" id="returnColumnIndices" value="5,7">
+  
+  <div class="option">
+    <label><input type="checkbox" id="checkCheckboxes" checked> Select matching rows</label>
+  </div>
+  
+  <div class="option">
+    <label><input type="checkbox" id="createNewTab" checked> Create new tab with results</label>
+  </div>
+  
+  <button id="submit">Submit</button>
+  <script src="popup.js"></script>
+</body>
+</html>
